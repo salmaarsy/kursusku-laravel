@@ -1,0 +1,544 @@
+
+/* =========================================
+   1. IMPORT BOOTSTRAP DAN FONT POPPINS
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+/* =========================================
+   2. PENGATURAN DASAR WEBSITE
+========================================= */
+
+:root {
+    --warna-utama: #7653c7;
+    --warna-gelap: #563b91;
+    --warna-muda: #a987f5;
+    --warna-background: #fcfaff;
+    --warna-border: #e6ddf3;
+
+    --bs-primary: #7653c7;
+    --bs-primary-rgb: 118, 83, 199;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f8fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand {
+    font-weight: 800;
+}
+
+
+/* =========================================
+   3. NAVBAR KURSUSKU
+========================================= */
+
+.navbar-kursusku {
+    background: linear-gradient(
+        115deg,
+        #8957ed,
+        #a987f5
+    );
+
+    padding: 18px 0;
+}
+
+.navbar-kursusku .navbar-brand {
+    color: #ffffff !important;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.navbar-kursusku .nav-link {
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 25px;
+    transition: 0.3s ease;
+}
+
+.navbar-kursusku .nav-link:hover {
+    color: #eee4ff !important;
+}
+
+.navbar-kursusku .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-kursusku .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================================
+   4. TEMA WARNA BOOTSTRAP
+========================================= */
+
+.btn-primary {
+    background-color: var(--warna-utama);
+    border-color: var(--warna-utama);
+}
+
+.btn-primary:hover {
+    background-color: var(--warna-gelap);
+    border-color: var(--warna-gelap);
+}
+
+.btn-outline-primary {
+    color: var(--warna-utama);
+    border-color: var(--warna-utama);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--warna-utama);
+    border-color: var(--warna-utama);
+}
+
+.text-primary {
+    color: var(--warna-gelap) !important;
+}
+
+.bg-primary {
+    background-color: var(--warna-utama) !important;
+}
+
+
+/* =========================================
+   5. HALAMAN PENDAFTARAN
+========================================= */
+
+.enrollment-page {
+    min-height: 80vh;
+    padding: 35px 0 45px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #eee4ff 0,
+            transparent 35%
+        ),
+        #fcfaff;
+}
+
+.enrollment-wrapper {
+    width: 92%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   6. HEADER PENDAFTARAN
+========================================= */
+
+.enrollment-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.enrollment-subtitle {
+    display: inline-block;
+    padding: 6px 15px;
+    margin-bottom: 13px;
+
+    color: var(--warna-utama);
+    background: #f0e8fc;
+    border: 1px solid #e0d1fa;
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.enrollment-header h1 {
+    color: var(--warna-gelap);
+    font-size: clamp(27px, 4vw, 36px);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.enrollment-header p {
+    max-width: 580px;
+    margin: 0 auto;
+
+    color: #70647d;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   7. CARD FORMULIR
+========================================= */
+
+.enrollment-panel {
+    position: relative;
+    overflow: hidden;
+
+    padding: 32px;
+
+    background: #ffffff;
+    border: 1px solid var(--warna-border);
+    border-radius: 23px;
+
+    box-shadow: 0 8px 24px rgba(86, 59, 145, 0.09);
+}
+
+.enrollment-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: linear-gradient(
+        90deg,
+        #7653c7,
+        #bba6f0
+    );
+}
+
+
+/* =========================================
+   8. JUDUL FORMULIR
+========================================= */
+
+.enrollment-panel-heading {
+    margin-bottom: 25px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #eee8f7;
+}
+
+.enrollment-panel-heading h2 {
+    color: var(--warna-gelap);
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.enrollment-panel-heading p {
+    color: #70647d;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   9. INPUT FORMULIR
+========================================= */
+
+.enrollment-field {
+    margin-bottom: 21px;
+}
+
+.enrollment-field label {
+    display: block;
+    margin-bottom: 9px;
+
+    color: var(--warna-gelap);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.enrollment-field .form-control,
+.enrollment-field .form-select {
+    width: 100%;
+    min-height: 48px;
+    padding: 11px 14px;
+
+    color: #3d324b;
+    background-color: var(--warna-background);
+
+    border: 1px solid var(--warna-border);
+    border-radius: 11px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+
+    box-shadow: none;
+}
+
+.enrollment-field .form-control:focus,
+.enrollment-field .form-select:focus {
+    border-color: #a58ae3;
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(118, 83, 199, 0.12);
+}
+
+
+/* =========================================
+   10. INFORMASI KETERSEDIAAN KURSI
+========================================= */
+
+.enrollment-availability {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: 23px 0;
+    padding: 15px;
+
+    color: var(--warna-utama);
+    background: #f5f0fc;
+
+    border: 1px solid var(--warna-border);
+    border-radius: 12px;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.enrollment-availability span {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   11. TOMBOL PENDAFTARAN
+========================================= */
+
+.enrollment-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+.enrollment-back,
+.enrollment-submit {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 21px;
+
+    border-radius: 11px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+
+/* Tombol kembali */
+
+.enrollment-back {
+    color: var(--warna-utama);
+    background: #f8f4ff;
+    border: 1px solid #e0d1fa;
+}
+
+.enrollment-back:hover {
+    color: var(--warna-gelap);
+    background: #eee6fc;
+}
+
+
+/* Tombol kirim */
+
+.enrollment-submit {
+    color: #ffffff;
+
+    background: linear-gradient(
+        115deg,
+        #7653c7,
+        #9b7bdc
+    );
+
+    border: none;
+
+    box-shadow: 0 6px 15px rgba(118, 83, 199, 0.22);
+}
+
+.enrollment-submit:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 20px rgba(118, 83, 199, 0.3);
+}
+
+.enrollment-submit span {
+    font-size: 19px;
+}
+
+
+/* =========================================
+   12. FOOTER PENDAFTARAN
+========================================= */
+
+.enrollment-footer {
+    margin-top: 22px;
+    text-align: center;
+
+    color: #887b96;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   13. RESPONSIVE UNTUK HP
+========================================= */
+
+@media (max-width: 600px) {
+
+    .navbar-kursusku {
+        padding: 15px 0;
+    }
+
+    .navbar-kursusku .navbar-brand {
+        font-size: 24px;
+    }
+
+    .navbar-kursusku .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .enrollment-page {
+        padding: 25px 0 35px;
+    }
+
+    .enrollment-wrapper {
+        width: 94%;
+    }
+
+    .enrollment-panel {
+        padding: 24px 19px;
+        border-radius: 19px;
+    }
+
+    .enrollment-header h1 {
+        font-size: 27px;
+    }
+
+    .enrollment-header p {
+        font-size: 12px;
+    }
+
+    .enrollment-panel-heading h2 {
+        font-size: 19px;
+    }
+
+    .enrollment-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .enrollment-back,
+    .enrollment-submit {
+        width: 100%;
+    }
+}
+/* =========================================
+   TOMBOL NAVBAR SELALU MEMILIKI KOTAK
+========================================= */
+
+.navbar-kursusku .navbar-nav .nav-link {
+    display: inline-block !important;
+
+    color: #ffffff !important;
+    background-color: rgba(45, 8, 133, 0.35) !important;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.75) !important;
+    border-radius: 9px !important;
+
+    padding: 9px 18px !important;
+
+    transition: background-color 0.3s ease;
+}
+
+/* Efek hover tanpa menghilangkan kotak */
+.navbar-kursusku .navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    background-color: #2d0885 !important;
+    border: 1.5px solid #ffffff !important;
+}
+
+/* Kotak tetap terlihat pada tombol aktif */
+.navbar-kursusku .navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    background-color: #2d0885 !important;
+    border: 1.5px solid #ffffff !important;
+}
+
+/* =========================================
+   NAVBAR KURSUSKU - DIGUNAKAN SEMUA HALAMAN
+========================================= */
+
+.navbar-kursusku {
+    background: linear-gradient(115deg, #8957ed, #a987f5);
+    padding: 18px 0;
+}
+
+.navbar-kursusku .navbar-brand {
+    color: #ffffff !important;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.navbar-kursusku .navbar-nav {
+    gap: 15px;
+}
+
+.navbar-kursusku .nav-button {
+    display: inline-block;
+    padding: 12px 23px !important;
+    margin-left: 15px;
+
+    color: #ffffff !important;
+    background: rgba(86, 59, 145, 0.35);
+
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+/* Efek ketika mouse diarahkan */
+.navbar-kursusku .nav-button:hover {
+    color: #ffffff !important;
+    background: rgba(45, 8, 133, 0.55);
+    border-color: #ffffff;
+}
+
+/* Tombol menu untuk HP */
+.navbar-kursusku .navbar-toggler {
+    border: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+.navbar-kursusku .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 991px) {
+    .navbar-kursusku .nav-button {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navbar-kursusku .navbar-nav {
+        gap: 5px;
+    }
+}

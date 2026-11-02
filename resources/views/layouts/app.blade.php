@@ -1,25 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>@yield('title', 'KursusKu')</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@yield('title', 'KursusKu')</title>
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    @yield('styles')
+</head>
 </head>
 <body>
+
     @include('partials.navbar')
 
-    <main class="container py-4">
-        @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
-
+    <main>
         @yield('content')
     </main>
+
 </body>
 </html>

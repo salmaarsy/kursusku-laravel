@@ -1,15 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-:root {
-    --purple: #7653c7;
-    --purple-dark: #563b91;
-    --purple-light: #a58ae3;
-    --lavender: #f2ebfc;
-    --text: #3d324b;
-    --muted: #70647d;
-    --white: #ffffff;
-    --border: #e6ddf3;
-}
+/* =========================================
+   1. PENGATURAN DASAR
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 * {
     margin: 0;
@@ -19,801 +13,242 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 85px;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: var(--text);
-    background: #fcfaff;
-    line-height: 1.7;
+    color: #563b91;
+    background: #f7f8fa;
     overflow-x: hidden;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
 }
 
 .container {
     width: 92%;
-    max-width: 1200px;
+    max-width: 1490px;
     margin: 0 auto;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+
+/* =========================================
+   2. NAVBAR
+========================================= */
 
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(255, 255, 255, 0.97);
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 3px 15px rgba(86, 59, 145, 0.06);
+    width: 100%;
+    background: linear-gradient(
+        115deg,
+        #8957ed,
+        #a987f5
+    );
+    padding: 18px 0;
 }
 
-.nav-content {
-    min-height: 76px;
+.navbar .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.navbar strong {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
     gap: 18px;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--purple);
-    font-size: 24px;
-    font-weight: 800;
-    white-space: nowrap;
+.navbar nav a {
+    display: inline-block;
+    padding: 10px 22px;
+
+    color: #ffffff !important;
+    background: rgba(45, 8, 133, 0.30);
+
+    border: 1.5px solid rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
 }
 
-.logo::before {
-    content: "✦";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 43px;
-    height: 43px;
-    color: white;
-    font-size: 23px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #ad96e9, #7653c7);
-    box-shadow: 0 6px 15px #7653c72b;
+.navbar nav a:hover {
+    background: #56309f;
+    border-color: #ffffff;
+    transform: translateY(-2px);
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 5px;
-}
 
-nav a {
-    padding: 9px 13px;
-    border-radius: 11px;
-    color: #685c77;
-    font-size: 13px;
-    font-weight: 600;
-    transition: 0.25s ease;
-}
-
-nav a:hover,
-nav a:focus-visible {
-    color: white;
-    background: linear-gradient(120deg, #7653c7, #9a7bdc);
-    box-shadow: 0 5px 13px #7653c72b;
-}
-
-/* =========================
-   HERO / HALAMAN UTAMA
-========================= */
+/* =========================================
+   3. HERO SECTION
+========================================= */
 
 .hero {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    grid-template-columns: 1fr 420px;
     align-items: center;
-    gap: 30px;
+    gap: 45px;
 
-    width: 100%;
-    padding: 35px 40px;
-    margin: 25px 0 35px;
+    margin-top: 34px;
+    padding: 45px 52px;
 
-    background: linear-gradient(120deg, #f2ebfc, #faf7ff, #eee6fb);
-    border: 1px solid #e6ddf3;
-    border-radius: 22px;
-    box-shadow: 0 8px 24px rgba(86, 59, 145, 0.07);
+    min-height: 385px;
+
+    background: linear-gradient(
+        115deg,
+        #f1e8ff,
+        #fcfaff
+    );
+
+    border: 1px solid #e8ddf8;
+    border-radius: 28px;
+
+    box-shadow: 0 12px 30px rgba(86, 59, 145, 0.06);
 }
 
-/* Bagian teks */
-.hero > div {
-    min-width: 0;
-}
+/* Tulisan kecil hero */
 
-.hero > div p:first-child {
+.hero > div > p:first-child {
     display: inline-block;
-    margin-bottom: 13px;
-    padding: 6px 13px;
+
+    padding: 9px 18px;
+    margin-bottom: 18px;
 
     color: #7653c7;
-    background: #ffffffd9;
-    border: 1px solid #e0d1fa;
-    border-radius: 25px;
+    background: #ffffff;
 
-    font-size: 12px;
+    border: 1px solid #dfd0fa;
+    border-radius: 30px;
+
+    font-size: 13px;
     font-weight: 700;
 }
+
+/* Judul utama */
 
 .hero h1 {
-    margin-bottom: 14px;
+    max-width: 780px;
+    margin-bottom: 18px;
+
     color: #563b91;
-    font-size: clamp(27px, 3vw, 39px);
-    font-weight: 800;
-    line-height: 1.3;
-    overflow-wrap: anywhere;
-}
 
-.hero > div p:last-child {
-    margin-bottom: 0;
-    color: #70647d;
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-/* Gambar utama */
-.hero img {
-    display: block;
-
-    width: 100%;
-    max-width: 300px;
-    height: 230px;
-
-    justify-self: center;
-    object-fit: contain;
-    object-position: center;
-}
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 850px) {
-    .hero {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
-        gap: 20px;
-        padding: 28px;
-    }
-
-    .hero img {
-        max-width: 250px;
-        height: 200px;
-    }
-
-    .hero h1 {
-        font-size: 29px;
-    }
-}
-
-/* =========================
-   HP
-========================= */
-
-@media (max-width: 600px) {
-    .hero {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 24px 20px;
-        margin: 18px 0 28px;
-        border-radius: 18px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero > div p:last-child {
-        font-size: 13px;
-    }
-
-    .hero img {
-        width: 100%;
-        max-width: 220px;
-        height: 170px;
-    }
-}
-
-.subtitle {
-    display: inline-block;
-    padding: 6px 14px;
-    margin-bottom: 17px;
-    border: 1px solid #e0d1fa;
-    border-radius: 30px;
-    background: #ffffffd9;
-    color: var(--purple);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.4px;
-}
-
-.hero h2 {
-    max-width: 950px;
-    margin: 0 auto 18px;
-    font-size: clamp(34px, 4.3vw, 58px);
-    line-height: 1.22;
-    font-weight: 800;
-    letter-spacing: -1.2px;
-    background: linear-gradient(
-        100deg,
-        #5e429e,
-        #8061cd,
-        #a087df
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-text > p:not(.subtitle) {
-    max-width: 760px;
-    margin: 0 auto 26px;
-    color: var(--muted);
-    font-size: 15px;
-    line-height: 1.9;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 14px 25px;
-    color: white;
-    background: linear-gradient(115deg, #7653c7, #9b7bdc);
-    border: 0;
-    border-radius: 13px;
-    font-size: 14px;
-    font-weight: 700;
-    box-shadow: 0 8px 20px #7653c733;
-    transition: 0.25s ease;
-}
-
-.btn::after {
-    content: "→";
-    font-size: 19px;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px #7653c744;
-}
-
-/* =========================
-   KATALOG KURSUS
-========================= */
-
-.courses {
-    position: relative;
-    padding: 58px 0 65px;
-    background: #fcfaff;
-}
-
-.section-title {
-    margin-bottom: 8px;
-    text-align: center;
-    color: var(--purple-dark);
-    font-size: clamp(26px, 3vw, 34px);
+    font-size: clamp(28px, 3.2vw, 46px);
     font-weight: 800;
     line-height: 1.35;
 }
 
-.section-description {
-    max-width: 650px;
-    margin: 0 auto 30px;
-    text-align: center;
-    color: var(--muted);
-    font-size: 14px;
+/* Deskripsi hero */
+
+.hero > div > p:nth-of-type(2) {
+    margin-bottom: 24px;
+
+    color: #51445f;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
-.course-list {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: stretch;
-    gap: 20px;
-}
+/* Gambar hero */
 
-.course-card {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 25px 23px;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    box-shadow: 0 5px 18px #5d41910d;
-    transition: transform 0.25s ease,
-                box-shadow 0.25s ease,
-                border-color 0.25s ease;
-}
+.hero img {
+    display: block;
 
-.course-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #7653c7, #bba6f0);
+    max-width: 420px;
+    height: 240px;
+
+    object-fit: contain;
+    object-position: center;
+    justify-self: center;
 }
 
-.course-card:nth-child(3n + 2)::before {
-    background: linear-gradient(90deg, #8b7be0, #c5b9fa);
-}
 
-.course-card:nth-child(3n)::before {
-    background: linear-gradient(90deg, #bd7dca, #ebc4ed);
-}
+/* =========================================
+   4. TOMBOL DAFTAR KURSUS
+========================================= */
 
-.course-card:hover {
-    transform: translateY(-5px);
-    border-color: #cbb6ef;
-    box-shadow: 0 14px 28px #5d419119;
-}
-
-.course-code {
+.card-link {
     display: inline-block;
-    margin-bottom: 12px;
-    padding: 5px 11px;
-    border-radius: 30px;
-    color: var(--purple);
-    background: #f0e8ff;
-    font-size: 11px;
-    font-weight: 700;
-}
 
-.course-card h3 {
-    margin-bottom: 9px;
-    color: var(--purple-dark);
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.5;
-}
+    padding: 12px 19px;
 
-.course-card p {
-    margin-bottom: 18px;
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 1.8;
-}
+    color: #7653c7;
+    background: #ffffff;
 
-.course-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: auto;
-    color: var(--purple);
+    border: 1.5px solid #dfd0fa;
+    border-radius: 12px;
+
     font-size: 13px;
     font-weight: 700;
-    transition: 0.2s;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
 }
 
-.course-link::after {
-    content: "→";
-    font-size: 17px;
-}
-
-.course-link:hover {
-    color: var(--purple-dark);
-    gap: 12px;
-}
-
-/* =========================
-   TENTANG KURSUSKU
-========================= */
-
-.about {
-    position: relative;
-    padding: 48px 0;
-    text-align: center;
-    background: linear-gradient(120deg, #f1e8fc, #faf5ff);
-    border-top: 1px solid var(--border);
-}
-
-.about h2 {
-    margin-bottom: 10px;
-    color: var(--purple-dark);
-    font-size: 27px;
-    font-weight: 800;
-}
-
-.about p {
-    max-width: 650px;
-    margin: 0 auto;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer {
-    padding: 20px 15px;
-    text-align: center;
-    color: white;
-    background: linear-gradient(110deg, #51358f, #7653c7);
-    font-size: 12px;
-}
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 950px) {
-    .nav-content {
-        padding: 12px 0;
-        flex-direction: column;
-        gap: 9px;
-    }
-
-    nav {
-        justify-content: center;
-    }
-
-    .hero {
-        padding: 52px 0;
-    }
-
-    .hero-content {
-        min-height: 320px;
-    }
-
-    .course-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-/* =========================
-   HP
-========================= */
-
-@media (max-width: 600px) {
-    .container {
-        width: 90%;
-    }
-
-    .nav-content {
-        gap: 8px;
-    }
-
-    .logo {
-        font-size: 21px;
-    }
-
-    .logo::before {
-        width: 37px;
-        height: 37px;
-        font-size: 20px;
-    }
-
-    nav {
-        gap: 3px;
-    }
-
-    nav a {
-        padding: 7px 9px;
-        font-size: 11px;
-    }
-
-    .hero {
-        padding: 45px 0;
-    }
-
-    .hero-content {
-        min-height: 285px;
-    }
-
-    .hero h2 {
-        font-size: clamp(30px, 8vw, 38px);
-        letter-spacing: -0.5px;
-    }
-
-    .hero-text > p:not(.subtitle) {
-        font-size: 14px;
-        margin-bottom: 22px;
-    }
-
-    .btn {
-        padding: 12px 19px;
-        font-size: 13px;
-    }
-
-    .courses {
-        padding: 42px 0 48px;
-    }
-
-    .section-title {
-        font-size: 26px;
-    }
-
-    .section-description {
-        margin-bottom: 23px;
-        font-size: 13px;
-    }
-
-    .course-list {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .course-card {
-        padding: 22px;
-    }
-
-    .about {
-        padding: 38px 0;
-    }
-
-    .about h2 {
-        font-size: 24px;
-    }
-}
-
-/* =================================
-   PILIHAN KURSUS - CARD LAVENDER
-================================= */
-
-.courses {
-    padding: 55px 0 65px;
-    background: #faf7ff;
-}
-
-.section-title {
-    margin-bottom: 8px;
-    text-align: center;
-    color: #30243d;
-    font-size: 34px;
-    font-weight: 800;
-}
-
-.section-description {
-    max-width: 650px;
-    margin: 0 auto 30px;
-    text-align: center;
-    color: #70647d;
-    font-size: 14px;
-}
-
-/* Susunan kartu */
-.course-list {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-    align-items: stretch;
-}
-
-/* Kotak kartu */
-.course-card {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    min-width: 0;
-    padding: 28px 25px;
-    border: 1px solid #e6ddf3;
-    border-radius: 27px;
-    background: rgba(255, 255, 255, 0.88);
-    box-shadow: 0 8px 24px rgba(86, 59, 145, 0.07);
-    transition: transform 0.25s ease,
-                box-shadow 0.25s ease,
-                border-color 0.25s ease;
-}
-
-/* Garis aksen atas */
-.course-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, #7653c7, #bba6f0);
-}
-
-/* Ornamen lingkaran pojok */
-.course-card::after {
-    content: "✦";
-    position: absolute;
-    top: 14px;
-    right: 22px;
-    z-index: -1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 85px;
-    height: 85px;
-    border-radius: 0 0 0 65px;
-    color: #a58ae3;
-    background: #f0e8fc;
-    font-size: 23px;
-    opacity: 0.75;
-}
-
-/* Variasi warna setiap kartu */
-.course-card:nth-child(3n + 2)::before {
-    background: linear-gradient(90deg, #8b7be0, #c5b9fa);
-}
-
-.course-card:nth-child(3n)::before {
-    background: linear-gradient(90deg, #bd7dca, #ebc4ed);
-}
-
-/* Label kode kursus */
-.course-code {
-    display: inline-block;
-    margin-bottom: 13px;
-    padding: 5px 12px;
-    border-radius: 20px;
-    color: #7653c7;
-    background: #f0e8ff;
-    font-size: 11px;
-    font-weight: 700;
-}
-
-/* Judul kursus */
-.course-card h3 {
-    position: relative;
-    margin-bottom: 10px;
-    color: #7653c7;
-    font-size: 20px;
-    line-height: 1.5;
-    font-weight: 800;
-}
-
-/* Deskripsi */
-.course-card p {
-    margin-bottom: 20px;
-    color: #70647d;
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-/* Tombol detail */
-.course-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: auto;
-    padding: 10px 15px;
-    border: 1px solid #e1d3f5;
-    border-radius: 11px;
-    color: #7653c7;
-    background: #f8f4ff;
-    font-size: 13px;
-    font-weight: 700;
-    transition: 0.25s ease;
-}
-
-.course-link span {
-    font-size: 17px;
-}
-
-.course-link:hover {
+.card-link:hover {
     color: #ffffff;
+    background: #7653c7;
     border-color: #7653c7;
-    background: linear-gradient(120deg, #7653c7, #9b7bdc);
+
+    transform: translateY(-2px);
 }
 
-/* Efek hover kartu */
-.course-card:hover {
-    transform: translateY(-5px);
-    border-color: #cbb6ef;
-    box-shadow: 0 16px 32px rgba(86, 59, 145, 0.14);
-}
 
-/* Latar lembut saat hover */
-.course-card:nth-child(3n + 2)::after {
-    color: #9381d8;
-    background: #f0edff;
-}
-
-.course-card:nth-child(3n)::after {
-    color: #b47abc;
-    background: #faeffb;
-}
-
-/* Tablet */
-@media (max-width: 950px) {
-    .course-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-    }
-
-    .course-card {
-        padding: 25px 22px;
-    }
-}
-
-/* HP */
-@media (max-width: 600px) {
-    .courses {
-        padding: 40px 0 48px;
-    }
-
-    .section-title {
-        font-size: 27px;
-    }
-
-    .section-description {
-        font-size: 13px;
-        margin-bottom: 22px;
-    }
-
-    .course-list {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .course-card {
-        padding: 25px 22px;
-        border-radius: 22px;
-    }
-
-    .course-card h3 {
-        font-size: 19px;
-    }
-
-    .course-card p {
-        font-size: 13px;
-    }
-}
-
-/* ===== KATALOG KURSUS ===== */
+/* =========================================
+   5. BAGIAN KURSUS PILIHAN
+========================================= */
 
 .courses {
-    padding: 55px 0 65px;
-    margin-top: 15px;
-    background:
-        radial-gradient(circle at top left, #eee4ff 0, transparent 35%),
-        #faf7ff;
-    border-radius: 22px;
+    margin-top: 45px;
+    margin-bottom: 50px;
+    padding: 55px 40px;
+
+    background: linear-gradient(
+        115deg,
+        #eee3ff,
+        #fcfaff 55%
+    );
+
+    border: 1px solid #eee5fa;
+    border-radius: 28px;
 }
+
+/* Judul bagian */
 
 .section-heading {
-    text-align: center;
     max-width: 700px;
-    margin: 0 auto 32px;
+    margin: 0 auto 35px;
+    text-align: center;
 }
 
-.section-heading .subtitle {
+.subtitle {
     display: inline-block;
-    margin-bottom: 12px;
-    padding: 6px 13px;
+
+    padding: 9px 18px;
+    margin-bottom: 17px;
+
     color: #7653c7;
-    background: #eee6fc;
-    border: 1px solid #e0d1fa;
+    background: #f0e8fc;
+
+    border: 1px solid #dfd0fa;
     border-radius: 30px;
-    font-size: 11px;
-    font-weight: 700;
+
+    font-size: 12px;
+    font-weight: 800;
     letter-spacing: 1px;
 }
 
 .section-heading h2 {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+
     color: #563b91;
-    font-size: clamp(28px, 3vw, 36px);
+    font-size: 38px;
     font-weight: 800;
-    line-height: 1.3;
 }
 
 .section-heading p {
@@ -822,289 +257,532 @@ nav a:focus-visible {
     line-height: 1.8;
 }
 
-/* Tata letak kartu */
+
+/* =========================================
+   6. GRID KARTU KURSUS
+========================================= */
+
 .course-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-    align-items: stretch;
+    gap: 24px;
 }
 
-/* Kotak kartu */
+/* Kartu kursus */
+
 .card {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-width: 0;
-    padding: 25px;
+
+    padding: 27px;
+
+    background: #ffffff;
+
     border: 1px solid #e6ddf3;
-    border-radius: 23px;
-    background: rgba(255, 255, 255, 0.92);
-    box-shadow: 0 7px 22px rgba(86, 59, 145, 0.07);
-    transition: transform 0.25s ease,
-                box-shadow 0.25s ease,
-                border-color 0.25s ease;
+    border-radius: 20px;
+
+    box-shadow: 0 7px 20px rgba(86, 59, 145, 0.06);
+
+    transition: all 0.3s ease;
 }
 
-/* Garis ungu di atas kartu */
-.card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, #7653c7, #bba6f0);
-}
+.card:hover {
+    transform: translateY(-5px);
 
-/* Ornamen sudut */
-.card::after {
-    content: "✦";
-    position: absolute;
-    top: 15px;
-    right: 18px;
-    z-index: -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 76px;
-    height: 76px;
-    border-radius: 0 0 0 60px;
-    color: #a58ae3;
-    background: #f0e8fc;
-    font-size: 23px;
-    opacity: 0.8;
-}
-
-.card:nth-child(3n + 2)::before {
-    background: linear-gradient(90deg, #8b7be0, #c5b9fa);
-}
-
-.card:nth-child(3n)::before {
-    background: linear-gradient(90deg, #bd7dca, #ebc4ed);
+    box-shadow: 0 12px 25px rgba(86, 59, 145, 0.12);
 }
 
 /* Ikon kursus */
+
 .card-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
-    margin-bottom: 16px;
-    border-radius: 16px;
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 20px;
+
     color: #7653c7;
-    background: #eee6fc;
-    border: 1px solid #e4d8f7;
-    font-size: 17px;
+    background: #f0e8fc;
+
+    border: 1px solid #e4d6fa;
+    border-radius: 15px;
+
+    font-size: 20px;
     font-weight: 800;
 }
 
-.card:nth-child(3n + 2) .card-icon {
-    color: #6555bd;
-    background: #eeebff;
-}
-
-.card:nth-child(3n) .card-icon {
-    color: #a35cae;
-    background: #f8eafa;
-}
-
 /* Kode kursus */
+
 .card small {
-    display: inline-block;
-    margin-bottom: 10px;
-    padding: 5px 11px;
-    border-radius: 20px;
-    color: #7653c7;
-    background: #f0e8ff;
+    margin-bottom: 9px;
+
+    color: #9b83c7;
     font-size: 11px;
     font-weight: 700;
 }
 
-/* Judul dan deskripsi */
+/* Nama kursus */
+
 .card h3 {
-    margin-bottom: 9px;
+    margin-bottom: 12px;
+
     color: #563b91;
     font-size: 19px;
-    font-weight: 700;
-    line-height: 1.5;
+    font-weight: 800;
 }
 
+/* Deskripsi kursus */
+
 .card p {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+
     color: #70647d;
     font-size: 13px;
     line-height: 1.8;
 }
 
-/* Tombol kartu */
-.card-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
+/* Tombol pada kartu */
+
+.card .card-link {
     margin-top: auto;
-    padding: 10px 14px;
-    border: 1px solid #dfd1f5;
-    border-radius: 10px;
-    color: #7653c7;
-    background: #f8f4ff;
-    font-size: 12px;
-    font-weight: 700;
-    transition: 0.25s ease;
 }
 
-.card-link span {
-    font-size: 17px;
-}
 
-.card-link:hover {
-    color: white;
-    border-color: #7653c7;
-    background: linear-gradient(120deg, #7653c7, #9b7bdc);
-}
+/* =========================================
+   7. RESPONSIVE TABLET
+========================================= */
 
-/* Efek hover */
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #cbb6ef;
-    box-shadow: 0 15px 30px rgba(86, 59, 145, 0.13);
-}
+@media (max-width: 992px) {
 
-/* Tablet */
-@media (max-width: 950px) {
+    .hero {
+        grid-template-columns: 1fr 320px;
+        gap: 25px;
+        padding: 35px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero img {
+        max-width: 320px;
+        height: 210px;
+    }
+
     .course-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
     }
 }
 
-/* HP */
-@media (max-width: 600px) {
-    .courses {
-        padding: 38px 0 45px;
+
+/* =========================================
+   8. RESPONSIVE HP
+========================================= */
+
+@media (max-width: 650px) {
+
+    .container {
+        width: 94%;
     }
 
-    .section-heading {
-        margin-bottom: 25px;
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar strong {
+        font-size: 23px;
+    }
+
+    .navbar nav {
+        gap: 8px;
+    }
+
+    .navbar nav a {
+        padding: 8px 11px;
+        font-size: 11px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        margin-top: 22px;
+        padding: 28px 22px;
+
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero > div > p:nth-of-type(2) {
+        font-size: 13px;
+    }
+
+    .hero img {
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
+    }
+
+    .courses {
+        margin-top: 25px;
+        padding: 35px 18px;
     }
 
     .section-heading h2 {
-        font-size: 27px;
+        font-size: 28px;
     }
 
     .section-heading p {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .course-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 17px;
     }
 
     .card {
-        padding: 22px;
-        border-radius: 19px;
-    }
-
-    .card h3 {
-        font-size: 18px;
+        padding: 23px;
     }
 }
-@import 'bootstrap/dist/css/bootstrap.min.css';
+/* =========================================
+   PERAPIAN HALAMAN HOME KURSUSKU
+========================================= */
 
+/* Latar belakang halaman */
 body {
-    background: #f7f8fa;
+    background: #f7f8fc;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
-.navbar-brand {
-    font-weight: 800;
-}
-
-/* NAVBAR */
-.navbar {
+/* Container utama */
+main.container {
     width: 100%;
-    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
-    color: white;
-    padding: 18px 0;
-    position: relative;
-    z-index: 1000;
-    box-sizing: border-box;
-    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.15);
-}
-
-.navbar .container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
-    padding: 0 24px;
-    display: flex;
-    justify-content: space-between;
+    padding: 32px 40px;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
-    gap: 24px;
-    box-sizing: border-box;
+    gap: 35px;
+
+    width: 100%;
+    min-height: 390px;
+    padding: 45px 50px;
+    margin: 0 auto 45px;
+
+    background: linear-gradient(
+        115deg,
+        #f3eaff,
+        #fbf8ff,
+        #eee4ff
+    );
+
+    border: 1px solid #e7d9fa;
+    border-radius: 28px;
+
+    box-shadow: 0 10px 30px rgba(86, 59, 145, 0.07);
 }
 
-/* Logo KursusKu */
-.navbar strong {
-    font-size: 25px;
-    font-weight: 800;
-    color: white;
-    letter-spacing: 0.5px;
+.hero-content {
+    min-width: 0;
 }
 
-/* Menu Navigasi */
-.navbar nav {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+.hero-label {
+    display: inline-block;
+    width: fit-content;
 
-.navbar nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 10px 16px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
+    padding: 9px 17px;
+    margin-bottom: 18px;
 
-/* Efek Hover */
-.navbar nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-}
+    color: #7653c7;
+    background: #ffffff;
 
-/* Tombol Daftar Kursus */
-.navbar nav a.btn-daftar {
-    background-color: white;
-    color: #7c3aed;
+    border: 1px solid #e1d1fa;
+    border-radius: 30px;
+
+    font-size: 13px;
     font-weight: 700;
 }
 
-.navbar nav a.btn-daftar:hover {
-    background-color: #f3e8ff;
-    color: #6d28d9;
+.hero-content h1 {
+    color: #563b91;
+    font-size: clamp(30px, 3.5vw, 45px);
+    font-weight: 800;
+    line-height: 1.3;
+
+    margin-bottom: 18px;
 }
 
-/* Tampilan HP */
+.hero-description {
+    color: #5e536c;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/* Tombol daftar kursus */
+.hero .card-link {
+    display: inline-block;
+
+    padding: 13px 20px;
+
+    color: #7653c7;
+    background: #ffffff;
+
+    border: 1px solid #d9c7fa;
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.hero .card-link:hover {
+    color: #ffffff;
+    background: #7653c7;
+    transform: translateY(-3px);
+}
+
+/* Gambar hero */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+.hero-image img {
+    display: block;
+
+    width: 100%;
+    max-width: 390px;
+    max-height: 280px;
+
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* =========================================
+   KATALOG KURSUS
+========================================= */
+
+.courses {
+    width: 100%;
+    padding: 45px 35px;
+
+    background: linear-gradient(
+        135deg,
+        #f0e5ff,
+        #fcf9ff
+    );
+
+    border-radius: 28px;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.section-heading .subtitle {
+    display: inline-block;
+
+    padding: 9px 18px;
+    margin-bottom: 15px;
+
+    color: #7653c7;
+    background: #eee5ff;
+
+    border: 1px solid #dfd0fa;
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.section-heading h2 {
+    margin-bottom: 12px;
+
+    color: #563b91;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.section-heading p {
+    color: #70647d;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Grid kartu kursus */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Kartu kursus */
+.course-grid .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+    padding: 25px;
+
+    background: #ffffff;
+    border: 1px solid #e6ddf3;
+    border-radius: 20px;
+
+    box-shadow: 0 7px 20px rgba(86, 59, 145, 0.07);
+
+    transition: 0.3s ease;
+}
+
+.course-grid .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(86, 59, 145, 0.13);
+}
+
+.card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 55px;
+    height: 55px;
+    margin-bottom: 18px;
+
+    color: #7653c7;
+    background: #f0e8fc;
+
+    border-radius: 15px;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.course-grid .card small {
+    color: #9879d2;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.course-grid .card h3 {
+    margin: 10px 0;
+
+    color: #563b91;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.course-grid .card p {
+    color: #70647d;
+    font-size: 13px;
+    line-height: 1.8;
+    flex-grow: 1;
+}
+
+.course-grid .card .card-link {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 10px 15px;
+
+    color: #7653c7;
+    background: #f5f0fc;
+
+    border: 1px solid #e2d4f7;
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.course-grid .card .card-link:hover {
+    color: #ffffff;
+    background: #7653c7;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+    main.container {
+        padding: 25px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 0.8fr;
+        padding: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 @media (max-width: 600px) {
-    .navbar .container {
-        flex-direction: column;
-        gap: 12px;
+    main.container {
+        padding: 18px 12px;
     }
 
-    .navbar nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px;
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 25px 20px;
+        gap: 25px;
     }
 
-    .navbar nav a {
-        padding: 8px 10px;
+    .hero-content h1 {
+        font-size: 27px;
+    }
+
+    .hero-description {
         font-size: 14px;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        max-height: 220px;
+    }
+
+    .courses {
+        padding: 30px 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
     }
 }
