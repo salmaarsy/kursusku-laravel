@@ -542,3 +542,235 @@ body {
         gap: 5px;
     }
 }
+
+/* ===== HALAMAN DAFTAR KURSUS ===== */
+
+.courses-section {
+    background: linear-gradient(135deg, #f0e4ff, #fcf8ff);
+    border-radius: 30px;
+    padding: 45px;
+    min-height: 650px;
+}
+
+.section-label {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #eee2ff;
+    color: #8052ce;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.courses-title {
+    color: #593b91;
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.courses-subtitle {
+    color: #75678f;
+    font-size: 17px;
+}
+
+/* Tombol tambah */
+
+.btn-purple {
+    background: #8052ce;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.btn-purple:hover {
+    background: #6339aa;
+    color: white;
+}
+
+/* Card pembungkus tabel */
+
+.table-card {
+    background: white;
+    border: 1px solid #eadcf8;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(80, 48, 130, 0.07);
+}
+
+/* Tabel */
+
+.course-table {
+    margin-bottom: 0;
+    color: #4f4168;
+    font-size: 15px;
+}
+
+.course-table thead th {
+    background: #eee5fa;
+    color: #593b91;
+    font-weight: 700;
+    padding: 17px 14px;
+    border-bottom: 2px solid #d9c7f0;
+    white-space: nowrap;
+}
+
+.course-table tbody td {
+    padding: 17px 14px;
+    border-color: #eee5f7;
+    vertical-align: middle;
+}
+
+.course-table tbody tr:hover td {
+    background: #f8f3ff;
+}
+
+/* Status */
+
+.status-badge {
+    display: inline-block;
+    background: #e9ddff;
+    color: #7045b2;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Alert */
+
+.courses-section .alert {
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .courses-section {
+        padding: 25px 15px;
+    }
+
+    .courses-title {
+        font-size: 30px;
+    }
+
+    .courses-subtitle {
+        font-size: 15px;
+    }
+}
+
+/* ===== HALAMAN TAMBAH KURSUS ===== */
+
+/* Background utama */
+.courses-section {
+    background: linear-gradient(135deg, #f0e4ff, #fcf8ff);
+    border-radius: 30px;
+    padding: 45px;
+    min-height: 650px;
+}
+
+/* Label dan judul */
+.section-label {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #eee2ff;
+    color: #8052ce;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.courses-title {
+    color: #593b91;
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.courses-subtitle {
+    color: #75678f;
+    font-size: 17px;
+}
+
+/* Card formulir */
+.form-card {
+    background: white;
+    border: 1px solid #eadcf8;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(80, 48, 130, 0.07);
+}
+
+/* Label input */
+.form-card .form-label {
+    color: #593b91;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Input dan textarea */
+.form-card .form-control,
+.form-card .form-select {
+    border: 1px solid #e2d5f2;
+    border-radius: 12px;
+    padding: 13px 16px;
+    color: #4f4168;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.form-card .form-control:focus,
+.form-card .form-select:focus {
+    border-color: #9a72dc;
+    box-shadow: 0 0 0 0.2rem rgba(128, 82, 206, 0.15);
+}
+
+/* Placeholder */
+.form-card .form-control::placeholder {
+    color: #a49ab3;
+}
+
+/* Tombol simpan */
+.btn-purple {
+    background: #8052ce;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-purple:hover {
+    background: #6339aa;
+    color: white;
+}
+
+/* Tombol kembali */
+.btn-back {
+    background: #f0e5ff;
+    color: #8052ce;
+    border: 1px solid #e2d1fa;
+    padding: 13px 25px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.btn-back:hover {
+    background: #e3d1fa;
+    color: #593b91;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+    .courses-section {
+        padding: 25px 15px;
+    }
+
+    .courses-title {
+        font-size: 30px;
+    }
+
+    .courses-subtitle {
+        font-size: 15px;
+    }
+}
+
