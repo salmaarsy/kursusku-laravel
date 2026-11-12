@@ -1,0 +1,7 @@
+================
+LOG AI SEDERHANA
+================
+
+1. Meminta bantuan membuat validasi menggunakan Form Request.
+2. Meminta contoh kode fitur Edit dan Update.
+3. Meminta bantuan menguji dan memperbaiki kesalahan kode.

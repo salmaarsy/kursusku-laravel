@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
 @section('title', 'Daftar Kursus')
@@ -8,10 +7,13 @@
 
     <section class="courses-section">
 
+        {{-- Header Halaman --}}
         <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
             <div>
                 <span class="section-label">DATA PEMBELAJARAN</span>
+
                 <h1 class="courses-title mt-3">Daftar Kursus</h1>
+
                 <p class="courses-subtitle">
                     Kelola dan lihat semua kursus yang tersedia di KursusKu.
                 </p>
@@ -22,12 +24,14 @@
             </a>
         </div>
 
+        {{-- Notifikasi Berhasil --}}
         @if(session('success'))
             <div class="alert alert-success rounded-3">
                 {{ session('success') }}
             </div>
         @endif
 
+        {{-- Tabel Daftar Kursus --}}
         <div class="card table-card">
             <div class="card-body p-4">
 
@@ -43,6 +47,7 @@
                                 <th>Kuota</th>
                                 <th>Tanggal Mulai</th>
                                 <th>Status</th>
+                                <th class="text-center">Aksi</th>
                             </tr>
                         </thead>
 
@@ -72,11 +77,44 @@
                                             {{ ucfirst($course->status) }}
                                         </span>
                                     </td>
+
+                                    {{-- Tombol Aksi --}}
+                                    <td class="text-center">
+                                        <div class="d-flex justify-content-center align-items-center gap-2 flex-nowrap">
+
+                                            {{-- Detail --}}
+                                            <a href="{{ route('courses.show', $course) }}"
+                                               class="btn btn-detail">
+                                                Detail
+                                            </a>
+
+                                            {{-- Edit --}}
+                                            <a href="{{ route('courses.edit', $course) }}"
+                                               class="btn btn-edit">
+                                                Edit
+                                            </a>
+
+                                            {{-- Hapus --}}
+                                            <form action="{{ route('courses.destroy', $course) }}"
+                                                  method="POST"
+                                                  class="m-0"
+                                                  onsubmit="return confirm('Apakah Anda yakin ingin menghapus kursus ini?')">
+
+                                                @csrf
+                                                @method('DELETE')
+
+                                                <button type="submit" class="btn btn-delete">
+                                                    Hapus
+                                                </button>
+                                            </form>
+
+                                        </div>
+                                    </td>
                                 </tr>
 
                             @empty
                                 <tr>
-                                    <td colspan="7" class="text-center py-4">
+                                    <td colspan="8" class="text-center py-4">
                                         Belum ada data kursus.
                                     </td>
                                 </tr>

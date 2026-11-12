@@ -1,0 +1,82 @@
+====================
+TEST MATRIX BAGIAN A
+====================
+
+#1  Pengujian             : Kode duplikat
+    Input                 : Gunakan code yang sudah ada
+    Hasil yang diharapkan : Ditolak
+    Status                : PASS
+
+#2  Pengujian             : Nama kosong
+    Input                 : Kosongkan nama
+    Hasil yang diharapkan : Ditolak
+    Status                : PASS
+
+#3  Pengujian             : Nama terlalu pendek
+    Input                 : AI
+    Hasil yang diharapkan : Ditolak
+    Status                : PASS
+
+#4  Pengujian             : Biaya negatif
+    Input                 : -1000
+    Hasil yang diharapkan : Ditolak
+    Status                : PASS
+
+#5  Pengujian             : Biaya bukan angka
+    Input                 : abc
+    Hasil yang diharapkan : Ditolak
+    Status                : PASS
+
+#6  Pengujian             : Kuota nol
+    Input                 : 0
+    Hasil yang diharapkan : Ditolak
+    Status                : PASS
+
+#7  Pengujian             : Kuota melebihi batas
+    Input                 : 501
+    Hasil yang diharapkan : Ditolak
+    Status                : PASS
+
+#8  Pengujian             : Kuota minimum
+    Input                 : 1
+    Hasil yang diharapkan : Ditolak
+    Status                : PASS
+
+====================
+TEST MATRIX BAGIAN B
+====================
+
+#9  Pengujian             : Kuota maksimum
+    Input                 : 500
+    Hasil yang diharapkan : Ditolak
+    Status                : PASS
+
+#10 Pengujian             : Tanggal tidak valid
+    Input                 : Masukkan tanggal tidak valid melalui pengujian request
+    Hasil yang diharapkan : Ditolak
+    Status                : PASS
+
+#11 Pengujian             : Status tidak valid
+    Input                 : Active
+    Hasil yang diharapkan : Ditolak
+    Status                : PASS
+
+#12 Pengujian             : Update kode sendiri
+    Input                 : Edit tanpa mengganti code
+    Hasil yang diharapkan : Berhasil
+    Status                : PASS
+
+#13 Pengujian             : Update kode duplikat
+    Input                 : Gunakan code kursus lain
+    Hasil yang diharapkan : Ditolak
+    Status                : PASS
+
+#14 Pengujian             : Update normal
+    Input                 : Ubah nama, biaya, kuota atau status
+    Hasil yang diharapkan : Berhasil
+    Status                : PASS
+
+#15 Pengujian             : Delete
+    Input                 : Hapus kursus dummy
+    Hasil yang diharapkan : Berhasil
+    Status                : PASS

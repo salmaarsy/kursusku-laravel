@@ -774,3 +774,435 @@ body {
     }
 }
 
+
+/* =========================================
+   HALAMAN DETAIL KURSUS
+========================================= */
+
+.course-detail-section {
+    background: linear-gradient(135deg, #f0e4ff, #fcf8ff);
+    border: 1px solid #eadcf8;
+    box-shadow: 0 10px 30px rgba(80, 48, 130, 0.05);
+}
+
+/* Card detail */
+
+.course-detail-card {
+    background: #ffffff;
+    border: 1px solid #eadcf8;
+    border-radius: 22px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(80, 48, 130, 0.07);
+}
+
+/* Header detail */
+
+.course-detail-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.course-detail-label {
+    display: inline-block;
+    color: #8052ce;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.course-detail-heading h2 {
+    color: #593b91;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.course-detail-heading p {
+    color: #75678f;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* Garis pemisah */
+
+.course-detail-divider {
+    border-bottom: 1px solid #eee5f7;
+    margin: 25px 0;
+}
+
+/* Grid informasi */
+
+.course-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 19px;
+    background: #fcfaff;
+    border: 1px solid #eee5f7;
+    border-radius: 14px;
+}
+
+.detail-label {
+    color: #887b96;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.detail-value {
+    color: #593b91;
+    font-size: 15px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+/* Deskripsi */
+
+.detail-description {
+    grid-column: 1 / -1;
+}
+
+/* Status */
+
+.course-detail-card .status-badge {
+    background: #e9ddff;
+    color: #7045b2;
+    padding: 9px 20px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Tombol */
+
+.course-detail-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    padding-top: 22px;
+    border-top: 1px solid #eee5f7;
+}
+
+.course-detail-actions .btn-back,
+.course-detail-actions .btn-purple {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.course-detail-actions .btn-back:hover,
+.course-detail-actions .btn-purple:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive HP */
+
+@media (max-width: 768px) {
+
+    .course-detail-section {
+        padding: 25px 15px;
+    }
+
+    .course-detail-card {
+        padding: 22px 17px;
+    }
+
+    .course-detail-heading h2 {
+        font-size: 21px;
+    }
+
+    .course-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-description {
+        grid-column: auto;
+    }
+
+    .course-detail-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .course-detail-actions .btn-back,
+    .course-detail-actions .btn-purple {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   TOMBOL AKSI DAFTAR KURSUS
+========================================= */
+
+.btn-detail,
+.btn-edit,
+.btn-delete {
+    padding: 8px 13px;
+    border-radius: 9px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+/* Tombol Detail */
+
+.btn-detail {
+    background: #eee5fa;
+    color: #7045b2;
+    border: 1px solid #d9c7f0;
+}
+
+.btn-detail:hover {
+    background: #d9c7f0;
+    color: #593b91;
+}
+
+/* Tombol Edit */
+
+.btn-edit {
+    background: #8052ce;
+    color: white;
+    border: 1px solid #8052ce;
+}
+
+.btn-edit:hover {
+    background: #6339aa;
+    color: white;
+}
+
+/* Tombol Hapus */
+
+.btn-delete {
+    background: #fff0f0;
+    color: #dc3545;
+    border: 1px solid #f3caca;
+}
+
+.btn-delete:hover {
+    background: #dc3545;
+    color: white;
+}
+
+/* Form hapus */
+
+.course-table form {
+    margin: 0;
+}
+
+/* =========================================
+   TOMBOL AKSI DAFTAR KURSUS
+========================================= */
+
+.btn-detail,
+.btn-edit,
+.btn-delete {
+    padding: 8px 13px;
+    border-radius: 9px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+/* Tombol Detail */
+
+.btn-detail {
+    background: #eee5fa;
+    color: #7045b2;
+    border: 1px solid #d9c7f0;
+}
+
+.btn-detail:hover {
+    background: #d9c7f0;
+    color: #593b91;
+}
+
+/* Tombol Edit */
+
+.btn-edit {
+    background: #8052ce;
+    color: white;
+    border: 1px solid #8052ce;
+}
+
+.btn-edit:hover {
+    background: #6339aa;
+    color: white;
+}
+
+/* Tombol Hapus */
+
+.btn-delete {
+    background: #fff0f0;
+    color: #dc3545;
+    border: 1px solid #f3caca;
+}
+
+.btn-delete:hover {
+    background: #dc3545;
+    color: white;
+}
+
+/* Form hapus */
+
+.course-table form {
+    margin: 0;
+}
+
+/* Merapikan tombol aksi */
+
+.course-table th:last-child,
+.course-table td:last-child {
+    min-width: 245px;
+    white-space: nowrap;
+}
+
+.course-table td:last-child .d-flex {
+    flex-wrap: nowrap !important;
+}
+
+.course-table td:last-child form {
+    margin: 0;
+}
+
+.course-table .btn-detail,
+.course-table .btn-edit,
+.course-table .btn-delete {
+    padding: 8px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* ==================================
+   HALAMAN EDIT KURSUS
+================================== */
+
+.edit-card {
+    background: #ffffff;
+    border: 1px solid #eadcfb;
+    border-radius: 24px;
+    box-shadow: 0 12px 35px rgba(91, 52, 150, 0.07);
+    overflow: hidden;
+}
+
+.edit-card-header {
+    border-bottom: 1px solid #eee5fa;
+    padding-bottom: 20px;
+}
+
+.edit-card-header h5 {
+    color: #563b91;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.edit-card-header p {
+    color: #777087;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.edit-card .form-label {
+    color: #42316e;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.edit-input {
+    min-height: 48px;
+    border: 1px solid #e4d7f5;
+    border-radius: 12px;
+    padding: 12px 15px;
+    color: #343044;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color: #fdfbff;
+    transition: all 0.3s ease;
+}
+
+textarea.edit-input {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.edit-input:focus {
+    border-color: #8957ed;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(137, 87, 237, 0.12);
+}
+
+.edit-input::placeholder {
+    color: #aaa1b8;
+}
+
+.edit-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    border-top: 1px solid #eee5fa;
+}
+
+.btn-cancel {
+    background: #ffffff;
+    color: #7653c7;
+    border: 1px solid #d9c5fa;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+}
+
+.btn-cancel:hover {
+    background: #f4edff;
+    color: #563b91;
+    border-color: #8957ed;
+}
+
+.edit-actions .btn-purple {
+    background: linear-gradient(135deg, #8957ed, #a987f5);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.edit-actions .btn-purple:hover {
+    background: linear-gradient(135deg, #7040ce, #8957ed);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+    .edit-actions {
+        flex-direction: column-reverse;
+    }
+
+    .edit-actions .btn {
+        width: 100%;
+    }
+
+    .edit-card .card-body {
+        padding: 22px !important;
+    }
+}
